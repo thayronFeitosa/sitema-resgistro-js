@@ -106,6 +106,10 @@ function Enviar() {
 
 
     } else if (sel[2].checked) {
+
+        if (select == 1) {
+            texoArea.value = `CLIENTE ${nome} ENTROU EM CONTATO PEDINDO AUXILIO PARA A INSTALAÇÃO DOS DRIVERS`
+        }
         console.log('entrou no cartão')
         res.innerHTML = "entrou no cartão"
 
