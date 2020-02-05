@@ -10,9 +10,6 @@ function copiar() {
 }
 
 
-
-
-
 /**
  * Pega os valores dos seus respectivos  valores do select e cria uma ocorrencia passando para dentro de um text area. Apos isso e usado o metodo copiar(); e é trasferido para a arear 
  * de trasnferencia do computador
@@ -115,7 +112,7 @@ function Enviar() {
 
     } else if (sel[3].checked) {
         console.log('entrou no birdid')
-        res.innerHTML = "entrou no birdid"
+        res.innerHTML = "ENTROU NO BIRDID"
 
     }
 
