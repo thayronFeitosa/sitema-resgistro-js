@@ -11,7 +11,6 @@
 
 <body>
     <h1>Suporte Soluti</h1>
-    <p>Ocorrencias Prontas do Birdid</p>
 
     <label for="nome">Nome</label>
     <input type="text" name="nome" id="nomeid" placeholder="Nome do usuario"><br>
@@ -21,13 +20,13 @@
 
 
     <div>
-        <input type="radio" name="sel" id="a1id" checked>
+        <input type="radio" name="sel" id="a1id" onclick="verificar();" checked>
         <label for="token">A1</label>
-        <input type="radio" name="sel" id="tokenid">
+        <input type="radio" name="sel" id="tokenid" onclick="verificar();">
         <label for="token">Token</label>
-        <input type="radio" name="sel" id="cartaoid">
+        <input type="radio" name="sel" id="cartaoid" onclick="verificar();">
         <label for="cartao">Cartão</label>
-        <input type="radio" name="sel" id="birdidid">
+        <input type="radio" name="sel" id="birdidid" onclick="verificar();">
         <label for="birdid">Birdid</label>
 
     </div>
@@ -35,11 +34,7 @@
     <p>
         <select id="select">
       <option value="0">--Opções--</option>
-      <option value="1">Emitir Certificado</option>
-      <option value="2">Instalar Driver</option>
-      <option value="3">Trocar Senha</option>
-      <option value="4">Mída bloqueada</option>
-      <option value="5">Erro na baixa</option>
+      
     </select>
         <input type="submit" onclick="Enviar();" value="Enviar">
         <button class="btn" data-clipboard-action="cut" data-clipboard-target="#textoid">
@@ -61,8 +56,6 @@
 
         </div>
     </p>
-    <!-- Trigger -->
-
 
 
 
@@ -70,6 +63,10 @@
 
 
     <script src="clipboard.js-master/dist/clipboard.min.js"></script>
+    <script src="certificados/a1.js"></script>
+    <script src="certificados/birdid.js"></script>
+    <script src="certificados/cartao.js"></script>
+    <script src="certificados/token.js"></script>
     <script src="javajs.js"></script>
 
 </body>
