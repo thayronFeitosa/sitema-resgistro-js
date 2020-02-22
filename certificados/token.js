@@ -75,17 +75,7 @@ function tipoToken() {
     divAtual.after(token);
 
 
-    if ()
-
-
-
 }
-
-
-
-
-
-
 
 
 var espaco = '\n';
