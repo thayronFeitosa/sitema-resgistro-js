@@ -77,17 +77,16 @@ function tipoToken() {
     divAtual.after(token);
 
 }
-
-//responsavel por selecionar qual token o cliente clicou
+//cria os novos elementos depois da div radio
 function escolhaToken() {
     var token = document.getElementsByName('token');
 
     if (token[0].checked) {
-        return 'SAFENET'
+        return 'A3 (SAFENET)'
     } else if (token[1].checked) {
-        return 'EPASS 2003'
+        return 'A3 (EPASS 2003)'
     } else if (token[2].checked) {
-        return 'GD'
+        return 'A3 (GD)'
     } else {
         return null
     }

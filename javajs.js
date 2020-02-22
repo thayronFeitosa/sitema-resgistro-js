@@ -18,6 +18,7 @@ function verificar() {
 
     } else if (sel[2].checked) {
         removeTipoMidia();
+        tipoCartao();
         removeOption();
         optionCatao();
     } else if (sel[3].checked) {
@@ -71,17 +72,22 @@ function Enviar() {
         }
 
     } else if (sel[2].checked) {
+        var escolha = escolherCartao();
+        if (escolha == null) {
+            window.alert('E obrigatório escolher o cartão!');
+            return;
+        }
         if (select == 1) {
-            texoArea.value = this.cartao.emitir + solicitacao;
+            texoArea.value = escolha + this.cartao.emitir + solicitacao;
             copiar();
         } else if (select == 2) {
-            texoArea.value = this.cartao.driver + solicitacao;
+            texoArea.value = escolha + this.cartao.driver + solicitacao;
             copiar();
         } else if (select == 3) {
-            texoArea.value = this.cartao.trocarSenha + solicitacao;
+            texoArea.value = escolha + this.cartao.senha + solicitacao;
             copiar();
         } else if (select == 4) {
-            texoArea.value = this.cartao.midiaBoqueada + solicitacao;
+            texoArea.value = escolha + this.cartao.midiaBoqueada + solicitacao;
             copiar();
         }
 
