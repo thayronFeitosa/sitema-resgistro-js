@@ -1,3 +1,4 @@
+// cria as opções de ocorrencias para o select
 function optionToken() {
     var opicao = document.createElement('option');
     var selectid = document.getElementById('select');
@@ -41,6 +42,7 @@ function tipoToken() {
     safenet.name = 'token';
     safenet.id = 'safenetid';
 
+
     var epass2003 = document.createElement('INPUT');
     epass2003.setAttribute('type', 'radio');
     epass2003.name = 'token';
@@ -74,15 +76,28 @@ function tipoToken() {
     var divAtual = document.getElementById("radio");
     divAtual.after(token);
 
-
 }
 
+//responsavel por selecionar qual token o cliente clicou
+function escolhaToken() {
+    var token = document.getElementsByName('token');
 
-var espaco = '\n';
+    if (token[0].checked) {
+        return 'SAFENET'
+    } else if (token[1].checked) {
+        return 'EPASS 2003'
+    } else if (token[2].checked) {
+        return 'GD'
+    } else {
+        return null
+    }
+}
+
+var espaco = '\n\n';
 
 var token = {
-    emitir: `A3 (): ${espaco}${espaco}CLIENTE ENTROU EM CONTATO COM DUVIDAS NA EMISSÃO DO CERTIFICADO A3, FEITO O ACESSO REMOTO${espaco}INSTALADO O DRIVER${espaco}REALIZADO A BAIXA DO CERTIFICADO${espaco}TESTADO NO PORTAL E-CAC E TUDO OK.${espaco}${espaco}SOLICITAÇÃO`,
-    driver: `A3():${espaco}${espaco}CLIENTE ENTROU EM CONTATO COM DUVIDA NA INSTALAÇÃO DO DRIVER, FEITO ACESSO REMOTO${espaco}INSTALADO O DRIVER${espaco}CONFIGURADO DLL NO MOZILA${espaco}TESTADO NO PORTAL E-CAC E TUDO OK.${espaco}${espaco}SOLICITAÇÃO:`,
-    trocarSenha: `A3():${espaco}${espaco}CLIENTE ENTROU EM CONTATO COM DUVIDA NA ALTERAÇÃO DA SENHA DA SUA MÍDIA, FEITO ACESSO REMOTO${espaco}FOI REALIZADO O PROCEDIMENTO DE ALTERAÇÃO DA SENHA.${espaco}FOI FEITO O TESTE NO PORTAL E-CAC E TUDO OK.${espaco}${espaco}SOLICITAÇÃO`,
-    midiaBoqueada: `A3(): ${espaco}${espaco}CLIENTE ENTROU EM CONTATO E INFORMA QUE SUA MÍDIA ESTAVA BLOQUEADA,${espaco}QUESTIONADO SE TINHA A SENHA DO ADMINISTADOR (CAIXA DE CD), O MESMO ALEGOU QUE SIM${espaco}FOI FEITO ACESSO REMOTO${espaco}FOI REALIZADO O PROCEDIMENTO DE DESBLOQUEIO COM A SENHA INFORMADO PELO CLIENTE${espaco}FOI FEITO O TESTE NO PORTAL DO E-CAC E TUDO OK.${espaco}${espaco}SOLICITAÇÃO:`
+    emitir: `${espaco}CLIENTE ENTROU EM CONTATO COM DUVIDAS NA EMISSÃO DO CERTIFICADO A3, FEITO O ACESSO REMOTO${espaco}INSTALADO O DRIVER${espaco}REALIZADO A BAIXA DO CERTIFICADO${espaco}TESTADO NO PORTAL E-CAC E TUDO OK.${espaco}SOLICITAÇÃO`,
+    driver: `${espaco}CLIENTE ENTROU EM CONTATO COM DUVIDA NA INSTALAÇÃO DO DRIVER, FEITO ACESSO REMOTO${espaco}INSTALADO O DRIVER${espaco}CONFIGURADO DLL NO MOZILA${espaco}TESTADO NO PORTAL E-CAC E TUDO OK.${espaco}SOLICITAÇÃO:`,
+    trocarSenha: `${espaco}CLIENTE ENTROU EM CONTATO COM DUVIDA NA ALTERAÇÃO DA SENHA DA SUA MÍDIA, FEITO ACESSO REMOTO${espaco}FOI REALIZADO O PROCEDIMENTO DE ALTERAÇÃO DA SENHA.${espaco}FOI FEITO O TESTE NO PORTAL E-CAC E TUDO OK.${espaco}SOLICITAÇÃO`,
+    midiaBoqueada: `${espaco}CLIENTE ENTROU EM CONTATO E INFORMA QUE SUA MÍDIA ESTAVA BLOQUEADA,${espaco}QUESTIONADO SE TINHA A SENHA DO ADMINISTADOR (CAIXA DE CD), O MESMO ALEGOU QUE SIM${espaco}FOI FEITO ACESSO REMOTO${espaco}FOI REALIZADO O PROCEDIMENTO DE DESBLOQUEIO COM A SENHA INFORMADO PELO CLIENTE${espaco}FOI FEITO O TESTE NO PORTAL DO E-CAC E TUDO OK.${espaco}SOLICITAÇÃO:`
 }

@@ -1,8 +1,6 @@
-/**
- * Pega os valores dos seus respectivos  valores do select e cria uma ocorrencia passando para dentro de um text area. Apos isso e usado o metodo copiar(); e é trasferido para a arear 
- * de trasnferencia do computador
+/*verifica e um dos métodos principais,ele cria e remove os elementos do select 
+dependendo doque o usuário escolher no radio
  */
-
 function verificar() {
     var sel = document.getElementsByName('sel');
 
@@ -30,6 +28,7 @@ function verificar() {
 
 }
 
+// verifica oque o usuário escolheu e envia para o text area a ocorrncia pronta 
 function Enviar() {
     var sel = document.getElementsByName('sel');
     var res = document.getElementById('res');
@@ -52,18 +51,22 @@ function Enviar() {
         }
 
     } else if (sel[1].checked) {
-
+        var escolha = escolhaToken();
+        if (escolha == null) {
+            window.alert('E obrigaotio ecolher o token!');
+            return;
+        }
         if (select == 1) {
-            texoArea.value = this.token.emitir + solicitacao;
+            texoArea.value = escolha + this.token.emitir + solicitacao;
             copiar();
         } else if (select == 2) {
-            texoArea.value = this.token.driver + solicitacao;
+            texoArea.value = escolha + this.token.driver + solicitacao;
             copiar();
         } else if (select == 3) {
-            texoArea.value = this.token.trocarSenha + solicitacao;
+            texoArea.value = escolha + this.token.trocarSenha + solicitacao;
             copiar();
         } else if (select == 4) {
-            texoArea.value = this.token.midiaBoqueada + solicitacao;
+            texoArea.value = escolha + this.token.midiaBoqueada + solicitacao;
             copiar();
         }
 
@@ -89,7 +92,7 @@ function Enviar() {
 
 
 }
-
+// remove os filhos anteriores id select
 function removeOption() {
     var list = document.getElementById("select");
     while (list.hasChildNodes()) {
@@ -98,7 +101,7 @@ function removeOption() {
 
 
 }
-
+// remove os filhos anteriores do id tipo de midia 
 function removeTipoMidia() {
     var list = document.getElementById("tipo-midia");
     while (list.hasChildNodes()) {
