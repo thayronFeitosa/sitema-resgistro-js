@@ -7,21 +7,24 @@ function verificar() {
     var sel = document.getElementsByName('sel');
 
     if (sel[0].checked) {
+        removeTipoMidia();
         removeOption(); //remove todos os filhos anteriores
-        console.log('entrou no a1 ')
         optionA1(); //cria novos filhos
-        console.log("saiu do a1 ")
 
 
     } else if (sel[1].checked) {
+        removeTipoMidia();
+        tipoToken();
         removeOption(); //remove todos os filhos anteriores
-        console.log('entrou no a1 ')
         optionToken(); // cria novos filhos
-        console.log("entrou no token")
 
     } else if (sel[2].checked) {
+        removeTipoMidia();
         removeOption();
-        console.log("entrou no cartão")
+        optionCatao();
+    } else if (sel[3].checked) {
+        removeTipoMidia();
+        removeOption();
         optionCatao();
     }
 
@@ -30,17 +33,16 @@ function verificar() {
 function Enviar() {
     var sel = document.getElementsByName('sel');
     var res = document.getElementById('res');
-    var nome = document.getElementById('nomeid').value;
-    var solicitacao = document.getElementById('solicitacaoid').value;
+    var solicitacao = document.getElementById('solicitacaoid').value.toUpperCase();
     var texoArea = document.getElementById('textoid');
     var select = document.getElementById('select').value;
-    console.log(nome)
     console.log(solicitacao)
-    var resposta = nome;
     var erro = `[ERRO]: AINDA ESTAMOS TRABALHANDO PARA IMPLEMENTAR ESSA OCORRÊNCIA POR FAVOR TENHA PACIÊNCIA`
+    if (verificarSolicitacao(solicitacao) == true) {
+        window.alert('A Solicitação deve conter 16 caracteres!');
+    }
 
     if (sel[0].checked) {
-
         if (select == 1) {
             texoArea.value = this.a1.emitir + solicitacao;
             copiar();
@@ -49,8 +51,8 @@ function Enviar() {
             copiar();
         }
 
-
     } else if (sel[1].checked) {
+
         if (select == 1) {
             texoArea.value = this.token.emitir + solicitacao;
             copiar();
@@ -97,13 +99,27 @@ function removeOption() {
 
 }
 
+function removeTipoMidia() {
+    var list = document.getElementById("tipo-midia");
+    while (list.hasChildNodes()) {
+        list.removeChild(list.firstChild);
+    }
 
+
+}
+
+//Copia o o conteudo selecionado apra a area de tranferencia
 function copiar() {
     new ClipboardJS('.btn', {
         text: function(trigger) {
             return trigger.getAttribute('aria-label');
         }
     });
+}
+//verifica que o solicitação tem todos os 16 caractestes
+function verificarSolicitacao(solicitacao) {
+    return solicitacao.length < 16 || solicitacao.length > 16 ? true : false;
+
 }
 
 

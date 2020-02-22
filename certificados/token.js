@@ -30,6 +30,64 @@ function optionToken() {
 
 }
 
+// função e responsavel por informar quais são os token que a empresa trabalha
+function tipoToken() {
+
+    var token = document.getElementById('tipo-midia');
+
+    //e criado o radio button
+    var safenet = document.createElement('INPUT');
+    safenet.setAttribute('type', 'radio');
+    safenet.name = 'token';
+    safenet.id = 'safenetid';
+
+    var epass2003 = document.createElement('INPUT');
+    epass2003.setAttribute('type', 'radio');
+    epass2003.name = 'token';
+    epass2003.id = 'epass2003id';
+
+    var gd = document.createElement('INPUT');
+    gd.setAttribute("type", 'radio');
+    gd.name = 'token';
+    gd.id = 'gdid';
+
+    //criando os labels para os tokens
+    var safenetLabel = document.createElement('label');
+    safenetLabel.innerHTML = 'Safenet  ';
+
+    var epass2003Label = document.createElement('label');
+    epass2003Label.innerHTML = 'Epass 2003  ';
+
+    var gdLabel = document.createElement('label');
+    gdLabel.innerHTML = "GD  "
+
+    // adicionando os filhos a div 
+    token.appendChild(safenet);
+    token.appendChild(safenetLabel);
+    token.appendChild(epass2003);
+    token.appendChild(epass2003Label);
+    token.appendChild(gd);
+    token.appendChild(gdLabel);
+
+
+    // adiciona o novo elemento criado e seu conteúdo ao DOM 
+    var divAtual = document.getElementById("radio");
+    divAtual.after(token);
+
+
+    if ()
+
+
+
+}
+
+
+
+
+
+
+
+
 var espaco = '\n';
 
 var token = {
