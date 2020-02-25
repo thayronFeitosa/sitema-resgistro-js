@@ -44,9 +44,26 @@ function Enviar() {
     }
 
     if (sel[0].checked) {
+        var escolha = escolhaJava();
         if (select == 1) {
-            texoArea.value = this.a1.emitir + solicitacao;
-            copiar();
+
+            if (escolha == 1) {
+                texoArea.value = this.a1.emitirIntalarJava + solicitacao;
+                copiar();
+                return;
+
+
+            } else if (escolha == 2) {
+
+                texoArea.value = this.a1.emitiConfigurarJava + solicitacao;
+                copiar();
+                return;
+
+            } else {
+
+                texoArea.value = this.a1.emitir + solicitacao;
+                copiar();
+            }
         } else if (select == 2) {
             texoArea.value = this.a1.trocar_senha + solicitacao;
             copiar();
