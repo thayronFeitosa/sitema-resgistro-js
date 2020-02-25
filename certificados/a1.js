@@ -19,6 +19,37 @@ function optionA1() {
 
 }
 
+function javaA1() {
+
+    var a1 = document.querySelector('#tipo-midia');
+
+    var instalacaoJava = document.createElement('INPUT');
+    instalacaoJava.setAttribute('type', 'radio');
+    instalacaoJava.name = 'javaA1';
+    instalacaoJava.id = "instalar-java";
+
+    var configurarJava = document.createElement('INPUT');
+    configurarJava.setAttribute('type', 'radio');
+    configurarJava.name = 'javaA1';
+    configurarJava.id = 'configurar-java';
+
+
+    var instalacaoJavaLabel = document.createElement('label');
+    instalacaoJavaLabel.innerHTML = 'Instalar Java';
+    var configurarJavaLabel = document.createElement('label');
+    configurarJavaLabel.innerHTML = 'Configurar Java';
+
+    a1.appendChild(instalacaoJava);
+    a1.appendChild(instalacaoJavaLabel);
+    a1.appendChild(configurarJava);
+    a1.appendChild(configurarJavaLabel);
+
+
+    var divAtual = document.getElementById('radio');
+    divAtual.after(a1);
+
+}
+
 var espaco = '\n';
 
 var a1 = {

@@ -6,6 +6,7 @@ function verificar() {
 
     if (sel[0].checked) {
         removeTipoMidia();
+        javaA1();
         removeOption(); //remove todos os filhos anteriores
         optionA1(); //cria novos filhos
 
