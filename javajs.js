@@ -24,7 +24,7 @@ function verificar() {
     } else if (sel[3].checked) {
         removeTipoMidia();
         removeOption();
-        optionCatao();
+        optionBirdid();
     }
 
 }

@@ -1,6 +1,6 @@
 function optionCatao() {
-    var opicao = document.createElement('option');
     var selectid = document.getElementById('select');
+    var opicao = document.createElement('option');
     var emitir = document.createElement('option');
     var senha = document.createElement('option');
     var drive = document.createElement('option');
