@@ -93,7 +93,22 @@ function Enviar() {
 
 
     } else if (sel[3].checked) {
-        console.log('entrou no birdid');
+
+        if (select == 1) {
+            texoArea.value = this.birdid.emitir + solicitacao;
+        } else if (select == 2) {
+            texoArea.value = this.birdid.sincronisar + solicitacao;
+
+        } else if (select == 3) {
+            texoArea.value = this.birdid.instalarUtilitario + solicitacao;
+
+        } else if (select == 4) {
+            texoArea.value = this.birdid.esqueceuSenha + solicitacao;
+
+        } else if (select == 5) {
+            texoArea.value = this.birdid.psbio + solicitacao;
+
+        }
     }
 
 
