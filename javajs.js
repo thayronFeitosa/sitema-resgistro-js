@@ -33,7 +33,7 @@ function verificar() {
 function Enviar() {
     var sel = document.getElementsByName('sel');
     var res = document.getElementById('res');
-    var solicitacao = document.getElementById('solicitacaoid').value.toUpperCase();
+    var solicitacao = document.getElementById('solicitacaoid').value.toUpperCase().trim();
     var texoArea = document.getElementById('textoid');
     var select = document.getElementById('select').value;
     console.log(solicitacao)
