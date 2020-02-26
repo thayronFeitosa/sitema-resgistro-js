@@ -4,18 +4,23 @@ function optionA1() {
     var opicao = document.createElement('option');
     var emitir = document.createElement('option');
     var senha = document.createElement('option');
+    var instalar = document.createElement('option')
 
     opicao.textContent = "--- Opções ---";
     emitir.textContent = "Emitir Certificado";
     senha.textContent = "Trocar a senha";
+    instalar.textContent = 'Instalar';
+
 
     opicao.value = 0;
     emitir.value = 1;
     senha.value = 2;
+    instalar.value = 3;
 
     selectid.appendChild(opicao);
     selectid.appendChild(emitir);
     selectid.appendChild(senha);
+    selectid.appendChild(instalar);
 
 }
 
@@ -68,5 +73,6 @@ var a1 = {
     emitir: `A1${espaco}CLIENTE COM DUVIDA NA EMISSÃO DO CERTIFICAO A1, FEITO ACESSO REMOTO ${espaco} REALIZADO A BAIXA INSTALADO O CERTIFICADO NA MAQUINA DEIXADO A OPÇÃO DE EXPORTAÇÃO DA CHAVE. ${espaco}ORIENTADO SOBRE O BACKUP ${espaco}TESTADO NO PORTAL DO E-CAC E TUDO OK ${espaco}SOLICITAÇÃO: `,
     emitirIntalarJava: `A1${espaco}CLIENTE COM DÚVIDA PARA EMITIR O CERTIFICADO.${espaco}FOI FEITO O ACESSO REMOTO.${espaco}DOWNLOAD DO EMISSOR.${espaco}REALIZADO O DOWNLOAD E INSTALAÇÃO DO JAVA.${espaco}CERTIFICADO EMITIDO COM ÊXITO.${espaco}CLIENTE INFORMADO DA CÓPIA OU BACKUP.${espaco}CERTIFICADO IMPORTADO COM ÊXITO.${espaco}TESTADO NO PORTAL ECAC COM SUCESSO.${espaco}SOLICITAÇÃO: `,
     emitiConfigurarJava: `A1${espaco}CLIENTE COM DÚVIDA PARA EMITIR O CERTIFICADO.${espaco}FOI FEITO O ACESSO REMOTO.${espaco}DOWNLOAD DO EMISSOR.${espaco}REALIZADA A CONFIGURAÇÃO DO JAVA PARA ABRIR O EMISSOR.${espaco}CERTIFICADO EMITIDO COM ÊXITO.${espaco}CLIENTE INFORMADO DA CÓPIA OU BACKUP.${espaco}CERTIFICADO IMPORTADO COM ÊXITO.${espaco}TESTADO NO PORTAL ECAC COM SUCESSO.${espaco}SOLICITAÇÃO: `,
-    trocar_senha: `A1${espaco}CLIENTE COM DUVIDAS NA ALTERAÇÃO DA SENHA DO CERTIFICADO.${espaco}CLIENTE TINHA O ARQUIVO .PEM${espaco}FOI REALIZADO O PROCESSO DE ALTERAÇÃO DA SENHA MEDIANTE O DOCUMENTO RESERVADO${espaco}FOI REALIZADO O TESTE NO PORTAL E-CAC E TUDO OK ${espaco}SOLICITAÇÃO: `
+    trocar_senha: `A1${espaco}CLIENTE COM DUVIDAS NA ALTERAÇÃO DA SENHA DO CERTIFICADO.${espaco}CLIENTE TINHA O ARQUIVO .PEM${espaco}FOI REALIZADO O PROCESSO DE ALTERAÇÃO DA SENHA MEDIANTE O DOCUMENTO RESERVADO${espaco}FOI REALIZADO O TESTE NO PORTAL E-CAC E TUDO OK ${espaco}SOLICITAÇÃO: `,
+    instalar: `A1.${espaco}CLIENTE COM DUVIDA NA INSTALAÇÃO DO CERTIFICADO A1, FEITO ACESSO REMOTO.${espaco}INSTALADO CERTIFICADO NA MÁQUINA DEIXANDO A OPÇÃO DE EXPORTAÇÃO DA CHAVE.${espaco}ORIENTADO SOBRE O BACKUP${espaco}TESTADO NO PORTAL E-CAC TUDO OK.${espaco}SOLICITAÇÃO: `
 }
