@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Soluti | Registro</title>
+</head>
+<body class="bg-light">
+    <div class="container" id="topo">
+        <h1 class="text-center m-5">Suporte Soluti</h1>
+        <div class="form-group d-flex">
+            <div class="form-inline col-10">
+                <label for="solicitacaoid">Solicitação</label>
+                <input class="form-control ml-2 w-75"  type="text" name="solicitação" id="solicitacaoid" placeholder="Informe a solicitação..." maxlength="31">
+            </div>
+            <div class="col-2">
+            <button class="btn btn-info w-100 ml-2" data-clipboard-action="cut" data-clipboard-target="#textoid">COPIAR</button>
+            </div> 
+        </div>
+
+        <div class=" form-group d-flex justify-content-between">
+            <div class="form-group d-flex" id="radio">
+                <span>Modelo do Certificado </span>
+                <div class="ml-3">
+                    <input type="radio" name="sel" id="a1id" onclick="verificar();" checked>
+                    <label for="a1id">A1</label>
+                </div>
+                <div class="ml-3">
+                    <input type="radio" name="sel" id="tokenid" onclick="verificar();">
+                    <label for="tokenid">Token</label>
+                </div>
+                <div class="ml-3">
+                    <input type="radio" name="sel" id="cartaoid" onclick="verificar();">
+                    <label for="cartaoid">Cartão</label>
+                </div>
+                <div class="ml-3">
+                    <input type="radio" name="sel" id="birdidid" onclick="verificar();">
+                    <label for="birdidid">Birdid</label>
+                </div>
+                <div id="tipo-midia"></div>
+            </div>
+            <div class="input-group col-2">
+                <select class="custom-select" id="select"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <textarea class="form-control w-100" name="texto" id="textoid" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="form-group d-flex justify-content-between">
+            <div>
+                <button class="btn btn-secondary" id="uppcase" onclick="uppcase();">MAIUSCULO</button>
+                <button class="btn btn-secondary ml-2" id="lowercase" onclick="lowercase();">MINUSCULO</button>
+                <input class="btn btn-danger ml-2" type="submit" onclick="Apagar()" value="APAGAR">
+            </div>
+            <div class="col-3">
+                <input class="btn btn-primary w-100" type="submit" onclick="Enviar();" value="Enviar">
+            </div>
+        </div>
+        <span id="span"></span>
+        <div id="res"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="clipboard.js-master/dist/clipboard.min.js"></script>
+    <script src="certificados/a1.js"></script>
+    <script src="certificados/birdid.js"></script>
+    <script src="certificados/cartao.js"></script>
+    <script src="certificados/token.js"></script>
+    <script src="js/javajs.js"></script>
+</body>
+</html>
