@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="topo">
+        <h1>Suporte Soluti</h1>
+        <label for="Solicitaçao"> Solicitação</label>
+        <input type="text" name="solicitação" id="solicitacaoid" placeholder="solicitação" maxlength="31"><br>
+
+
+        <div id="radio">
+            <input type="radio" name="sel" id="a1id" onclick="verificar();" checked>
+            <label for="token">A1</label>
+            <input type="radio" name="sel" id="tokenid" onclick="verificar();">
+            <label for="token">Token</label>
+            <input type="radio" name="sel" id="cartaoid" onclick="verificar();">
+            <label for="cartao">Cartão</label>
+            <input type="radio" name="sel" id="birdidid" onclick="verificar();">
+            <label for="birdid">Birdid</label>
+            <div id="tipo-midia">
+
+
+
+            </div>
+        </div>
+
+
+
+        <p>
+            <select id="select">
+      
+    </select>
+            <input type="submit" onclick="Enviar();" value="Enviar">
+            <button class="btn" data-clipboard-action="cut" data-clipboard-target="#textoid">
+        COPIAR
+      </button><samp id="span"></samp>
+
+
+        </p>
+        <p>
+            <textarea name="texto" id="textoid" cols="30" rows="10"></textarea>
+            <div>
+                <input type="submit" onclick="Apagar()" value="APAGAR">
+                <button id="uppcase" onclick="uppcase();">MAIUSCULO</button>
+                <button id="lowercase" onclick="lowercase();">MINUSCULO</button>
+
+            </div>
+
+            <div id="res">
+
+            </div>
+        </p>
+
+        <script src="clipboard.js-master/dist/clipboard.min.js"></script>
+        <script src="certificados/a1.js"></script>
+        <script src="certificados/birdid.js"></script>
+        <script src="certificados/cartao.js"></script>
+        <script src="certificados/token.js"></script>
+        <script src="javajs.js"></script>
+
+    </div>
+</body>
+
+</html>
