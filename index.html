@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,21 @@
     <link rel="stylesheet" href="style.css">
     <title>Soluti | Registro</title>
 </head>
+
 <body class="bg-light">
     <div class="container" id="topo">
         <h1 class="text-center m-5">Suporte Soluti</h1>
         <div class="form-group d-flex">
-            <div class="form-inline col-10">
+            <div class="form-inline col-8">
                 <label for="solicitacaoid">Solicitação</label>
-                <input class="form-control ml-2 w-75"  type="text" name="solicitação" id="solicitacaoid" placeholder="Informe a solicitação..." maxlength="31">
+                <input class="form-control ml-2 w-75" type="text" name="solicitação" id="solicitacaoid" placeholder="Informe a solicitação..." maxlength="31">
             </div>
             <div class="col-2">
-            <button class="btn btn-info w-100 ml-2" data-clipboard-action="cut" data-clipboard-target="#textoid">COPIAR</button>
-            </div> 
+                <input class="btn btn-primary w-100" type="submit" onclick="Enviar();" value="Enviar">
+            </div>
+            <div class="col-2 mr-3">
+                <button class="btn btn-info w-100 ml-2" data-clipboard-action="cut" data-clipboard-target="#textoid">COPIAR</button>
+            </div>
         </div>
 
         <div class=" form-group d-flex justify-content-between">
@@ -56,9 +61,7 @@
                 <button class="btn btn-secondary ml-2" id="lowercase" onclick="lowercase();">MINUSCULO</button>
                 <input class="btn btn-danger ml-2" type="submit" onclick="Apagar()" value="APAGAR">
             </div>
-            <div class="col-3">
-                <input class="btn btn-primary w-100" type="submit" onclick="Enviar();" value="Enviar">
-            </div>
+
         </div>
         <span id="span"></span>
         <div id="res"></div>
@@ -73,4 +76,5 @@
     <script src="certificados/token.js"></script>
     <script src="js/javajs.js"></script>
 </body>
+
 </html>

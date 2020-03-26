@@ -1,3 +1,4 @@
+// cria as opções de ocorrencias para o select
 function optionA1() {
 
     var selectid = document.getElementById('select');
@@ -23,6 +24,7 @@ function optionA1() {
     selectid.appendChild(instalar);
 
 }
+// função e responsavel por informar se foi instado o java ou configurado na hora da emissão
 
 function javaA1() {
 

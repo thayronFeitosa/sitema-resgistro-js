@@ -116,15 +116,16 @@ function Enviar() {
 
         if (select == 1) {
             texoArea.value = this.birdid.emitir + solicitacao;
+            copiar();
         } else if (select == 2) {
             texoArea.value = this.birdid.sincronisar + solicitacao;
-
+            copiar();
         } else if (select == 3) {
             texoArea.value = this.birdid.instalarUtilitario + solicitacao;
-
+            copiar();
         } else if (select == 4) {
             texoArea.value = this.birdid.esqueceuSenha + solicitacao;
-
+            copiar();
         } else if (select == 5) {
             texoArea.value = this.birdid.psbio + solicitacao;
 
