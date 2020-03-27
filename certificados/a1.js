@@ -42,9 +42,9 @@ function javaA1() {
 
 
     var instalacaoJavaLabel = document.createElement('label');
-    instalacaoJavaLabel.innerHTML = 'Instalar Java';
+    instalacaoJavaLabel.innerHTML = ' Instalar Java ' + ".  .";
     var configurarJavaLabel = document.createElement('label');
-    configurarJavaLabel.innerHTML = 'Configurar Java';
+    configurarJavaLabel.innerHTML = ' Configurar Java ';
 
     a1.appendChild(instalacaoJava);
     a1.appendChild(instalacaoJavaLabel);

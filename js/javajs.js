@@ -24,6 +24,7 @@ function verificar() {
         optionCatao();
     } else if (sel[3].checked) {
         removeTipoMidia();
+        birdIdEscolhaDispositivo();
         removeOption();
         optionBirdid();
     }
@@ -38,7 +39,7 @@ function Enviar() {
     var texoArea = document.getElementById('textoid');
     var select = document.getElementById('select').value;
     console.log(solicitacao)
-    var erro = `[ERRO]: AINDA ESTAMOS TRABALHANDO PARA IMPLEMENTAR ESSA OCORRÊNCIA POR FAVOR TENHA PACIÊNCIA`
+    var erro = `[ERRO]: AINDA ESTAMOS TRABALHANDO PARA IMPLEMENTAR ESSA OCORRÊNCIA POR FAVOR TENHA PACIÊNCIA`;
     if (verificarSolicitacao(solicitacao) == true) {
         window.alert('A Solicitação deve conter 16 caracteres!');
         return;
@@ -113,22 +114,50 @@ function Enviar() {
 
 
     } else if (sel[3].checked) {
+        var escolha = escolhaBird();
+        if (escolha == null) {
+            window.alert('E obrigatório ecolher o Celular ou o Desktop!');
+            return;
+        }
+        if (escolha == 1) {
+            if (select == 1) {
+                texoArea.value = this.birdid.emitirCelular + solicitacao;
+                copiar();
+            } else if (select == 2) {
+                texoArea.value = this.birdid.sincronisarCelular + solicitacao;
+                copiar();
+            } else if (select == 3) {
+                texoArea.value = this.birdid.instalarUtilitario + solicitacao;
+                copiar();
+            } else if (select == 4) {
+                texoArea.value = erro;
 
-        if (select == 1) {
-            texoArea.value = this.birdid.emitir + solicitacao;
-            copiar();
-        } else if (select == 2) {
-            texoArea.value = this.birdid.sincronisar + solicitacao;
-            copiar();
-        } else if (select == 3) {
-            texoArea.value = this.birdid.instalarUtilitario + solicitacao;
-            copiar();
-        } else if (select == 4) {
-            texoArea.value = this.birdid.esqueceuSenha + solicitacao;
-            copiar();
-        } else if (select == 5) {
-            texoArea.value = this.birdid.psbio + solicitacao;
+            } else if (select == 5) {
+                texoArea.value = this.birdid.psbio + solicitacao;
 
+            } else if (select == 6) {
+                texoArea.value = this.birdid.erroBaixa + solicitacao;
+            }
+        } else {
+
+            if (select == 1) {
+                texoArea.value = this.birdid.emitir + solicitacao;
+                copiar();
+            } else if (select == 2) {
+                texoArea.value = this.birdid.sincronisar + solicitacao;
+                copiar();
+            } else if (select == 3) {
+                texoArea.value = this.birdid.instalarUtilitario + solicitacao;
+                copiar();
+            } else if (select == 4) {
+                texoArea.value = erro;
+
+            } else if (select == 5) {
+                texoArea.value = this.birdid.psbio + solicitacao;
+
+            } else if (select == 6) {
+                texoArea.value = this.birdid.erroBaixa + solicitacao;
+            }
         }
     }
 
