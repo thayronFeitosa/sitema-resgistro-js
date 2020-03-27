@@ -15,7 +15,7 @@
         <div class="form-group d-flex">
             <div class="form-inline col-8">
                 <label for="solicitacaoid">Solicitação</label>
-                <input class="form-control ml-2 w-75" type="text" name="solicitação" id="solicitacaoid" placeholder="Informe a solicitação..." maxlength="31">
+                <input class="form-control ml-2 w-75" type="text" name="solicitação" id="solicitacaoid" placeholder="Informe a solicitação..." maxlength="30">
             </div>
             <div class="col-2">
                 <input class="btn btn-primary w-100" type="submit" onclick="Enviar();" value="Enviar">
@@ -65,6 +65,28 @@
         <span id="span"></span>
         <div id="res"></div>
     </div>
+
+
+
+    <label class=" form-group d-flex justify-content-center" for="todas dll">DLL</label>
+    <div>
+
+
+        <input type="radio" name="sel" id="windowsid " onclick="verificar();">
+        <label for="windows"> Windows </label>
+
+        <input type="radio" name="sel" id="linuxid " onclick="verificar();">
+        <label for="linux"> Linux </label>
+
+        <input type="radio" name="sel" id="macid " onclick="verificar();">
+        <label for="mac"> MAC </label>
+
+
+    </div>
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

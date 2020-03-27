@@ -34,8 +34,11 @@ function verificar() {
 // verifica oque o usuário escolheu e envia para o text area a ocorrncia pronta 
 function Enviar() {
     var sel = document.getElementsByName('sel');
-    var res = document.getElementById('res');
-    var solicitacao = document.getElementById('solicitacaoid').value.toUpperCase().trim();
+    var res = document.getElementById('solicitacaoid').value.toUpperCase().trim();
+    var solicitacao = tirarEspacosEmBrancoDaSolicitacao(res);
+    console.log(solicitacao)
+
+
     var texoArea = document.getElementById('textoid');
     var select = document.getElementById('select').value;
     console.log(solicitacao)
@@ -162,6 +165,14 @@ function Enviar() {
     }
 
 
+}
+
+// retira os espaços que em branco que contem nas solicitações 
+function tirarEspacosEmBrancoDaSolicitacao(valor) {
+    var busca = " ";
+    var strbusca = eval('/' + busca + '/g');
+    var texto = valor.replace(strbusca, '');
+    return texto;
 }
 // remove os filhos anteriores id select
 function removeOption() {
